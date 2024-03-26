@@ -8,6 +8,6 @@ export class CreateProductController {
 
   @Post()
   async createProductController(@Body() data: Prisma.productCreateInput) {
-    return this.createProductService.createProduct(data);
+    return await this.createProductService.createProduct(data);
   }
 }

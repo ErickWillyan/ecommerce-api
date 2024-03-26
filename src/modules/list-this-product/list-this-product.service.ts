@@ -5,7 +5,7 @@ import { PrismaService } from 'src/database/PrismaService';
 export class ListThisProductService {
   constructor(private prisma: PrismaService) {}
   async listThisProduct(categoryId: string) {
-    return this.prisma.product.findMany({
+    return await this.prisma.product.findMany({
       where: { categoryId },
     });
   }

@@ -24,8 +24,25 @@ model product {
   name        String
   price       Decimal
   description String
-  image String
+  image       String
   category    category @relation(fields: [categoryId], references: [id])
 
-  categoryId String
+  categoryId   String
+  shoppingList shoppingList[]
+}
+
+model shoppingList {
+  id         String   @id @default(uuid())
+  product    product  @relation(fields: [productId], references: [id])
+  amount     Int
+  productId  String
+  purchase   purchase @relation(fields: [purchaseId], references: [id])
+  purchaseId String
+}
+
+model purchase {
+  id           String         @id @default(uuid())
+  draft        Boolean        @default(false)
+  totalPrice   Decimal        @default(0)
+  shoppingList shoppingList[]
 }

@@ -8,6 +8,6 @@ export class CreateCategoryController {
 
   @Post()
   async createCategoryController(@Body() data: Prisma.categoryCreateInput) {
-    return this.createCategoryService.createCategory(data);
+    return await this.createCategoryService.createCategory(data);
   }
 }

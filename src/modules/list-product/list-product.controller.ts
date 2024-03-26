@@ -7,6 +7,6 @@ export class ListProductController {
 
   @Get()
   async listProductController() {
-    return this.listProductService.listProduct();
+    return await this.listProductService.listProduct();
   }
 }

@@ -9,6 +9,6 @@ export class ListThisProductController {
 
   @Get(':categoryId')
   async listThisProductController(@Param('categoryId') categoryId: string) {
-    return this.listThisProductService.listThisProduct(categoryId);
+    return await this.listThisProductService.listThisProduct(categoryId);
   }
 }
