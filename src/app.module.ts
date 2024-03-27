@@ -6,6 +6,8 @@ import { ListThisProductModule } from './modules/list-this-product/list-this-pro
 import { CreateItemShoppingListModule } from './modules/create-item-shopping-list/create-item-shopping-list.module';
 import { CreatePurchaseModule } from './modules/create-purchase/create-purchase.module';
 import { DetailProductModule } from './modules/detail-product/detail-product.module';
+import { FinishPurchaseModule } from './modules/finish-purchase/finish-purchase.module';
+import { DeleteItemShoppingListModule } from './modules/delete-item-shopping-list/delete-item-shopping-list.module';
 
 @Module({
   imports: [
@@ -16,6 +18,8 @@ import { DetailProductModule } from './modules/detail-product/detail-product.mod
     CreateItemShoppingListModule,
     CreatePurchaseModule,
     DetailProductModule,
+    FinishPurchaseModule,
+    DeleteItemShoppingListModule,
   ],
   controllers: [],
   providers: [],
